@@ -1,0 +1,9 @@
+/* Colors | Dark Theme */
+
+:root {
+  --body-bg: #171823;
+  --body-text: #c8cbe7;
+  --element-disable: #4d5067;
+  --element-dimm: #5b5e7e;
+  --ekement-hover: #e3e4f1;
+}

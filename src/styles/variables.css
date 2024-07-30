@@ -1,0 +1,10 @@
+:root {
+  /* Font Family */
+  --font-family: "Josefin Sans", sans-serif;
+
+  /* Colors | Primitive */
+  --bright-blue: #3a7bfd;
+
+  /* Colors | Semantics */
+  --checkmark: linear-gradient #57ddff to #c058f3;
+}

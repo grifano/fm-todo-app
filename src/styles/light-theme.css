@@ -1,0 +1,9 @@
+/* Colors | Light Theme */
+
+:root {
+  --body-bg: #fafafa;
+  --body-text: #494c6b;
+  --element-disable: #d1d2da;
+  --element-dimm: #9495a5;
+  --ekement-hover: #494c6b;
+}
