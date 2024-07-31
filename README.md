@@ -1,8 +1,64 @@
-# React + Vite
+<img src="./src/assets/react-logo.svg" alt="react logo" width="10%"/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React ToDo App
 
-Currently, two official plugins are available:
+<!-- <img src="./src/assets/screenshot.webp" alt="app screenshot" width="50%"/> -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository contained the implementation of an image search application using React. The project was created with Vite, used Formik for forms, Axios for HTTP requests, and styled components with CSS modules. The application had several key functionalities, which are summarized below:
+
+## Functionality Summary
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- ✅ Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- **Bonus**: Drag and drop to reorder items on the list
+
+## Live Demo
+
+- **Source Files**: [GitHub Repository]()
+- **Working Page**: [Live Preview](https://goit-react-hw-04-delta-blue.vercel.app/)
+
+## Project Setup
+
+1.  Clone the repository.
+2.  Install dependencies: `npm install`
+3.  Start the development server: `npm run dev`
+
+<!-- ## Code Quality
+
+- Ensured no errors or warnings in the console.
+- Maintained clean and understandable JavaScript code using Prettier for formatting. -->
+
+<!-- ## Component List
+
+- `App`: The root component containing the main structure.
+- `SearchBar`: Component with a form to search for images.
+- `ImageGallery`: Component to display a list of image cards.
+- `ImageCard`: Individual image item within the gallery.
+- `Loader`: Loading spinner displayed during image fetch.
+- `ErrorMessage`: Displayed when an error occurred during image fetch.
+- `LoadMoreBtn`: Button to load more images.
+- `ImageModal`: Modal window to display an enlarged version of the image. -->
+
+## Acknowledgments
+
+- Synebo - [www.synebo.io](https://www.synebo.io/)
+- Frontend Mentor -
+  [www.frontendmentor.com](https://www.frontendmentor.io/profile/grifano)
+
+<!-- <img src="https://goit.global/mx/assets/images/logo-goit.svg" alt="goit logo" width="10%"/>
+
+[GOIT](https://edu.goit.global/uk/referral?x=eyJlbWFpbCI6InNvcmxlbmtAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoi0KHQtdGA0LPRltC5IiwibG9jYWxlIjoidWsiLCJsYW5ndWFnZSI6InVrIiwidG90YWxIb3VycyI6NzcsImN1cnJlbnRPckxhc3RUZWNobm9sb2d5IjoiSFRNTF9DU1MiLCJwYXNzZWRIb21ld29ya3NDb3VudCI6NX0=) -
+big love to GoIT team for their patience, afford, help, and positivity that they
+share with us ❤️ -->
+
+## Author
+
+- Website - [www.grifano.com](https://grifano.com)
+- Frontend Mentor -
+  [www.frontendmentor.com](https://www.frontendmentor.io/profile/grifano)
+- LinkedIn - [www.linkedin.com](https://www.linkedin.com/in/grifano/)

@@ -1,0 +1,77 @@
+.tasksActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  min-height: 48px;
+  position: relative;
+}
+.tasksActions button {
+  background: transparent;
+}
+.tasksActions_counter,
+.tasksActions_clear {
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: var(--element-dimm);
+}
+.tasksActions_filters {
+  display: flex;
+  align-items: center;
+}
+.tasksAction_filterLabel {
+  position: relative;
+  padding: 16px 9px;
+  color: var(--element-dimm);
+}
+.tasksAction_filterLabel.isActive {
+  color: var(--color-active);
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + .tasksAction_filterLabel::before {
+  background-color: #4a4a4a;
+}
+@media screen and (max-width: 560px) {
+  .tasksActions_filters {
+    position: absolute;
+    bottom: -64px;
+    left: 0;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--element-bg);
+    box-shadow: var(--element-shadow);
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 375px) {
+  .tasksActions {
+    min-height: 64px;
+    padding: 0 24px;
+  }
+
+  .tasksAction_filterLabel {
+    cursor: pointer;
+  }
+
+  .tasksAction_filterLabel,
+  .tasksActions_clear {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .tasksAction_filterLabel:hover,
+  .tasksAction_filterLabel:focus,
+  .tasksActions_clear:hover,
+  .tasksActions_clear:focus {
+    color: var(--body-text);
+  }
+
+  .tasksActions_counter,
+  .tasksActions_clear {
+    font-size: 14px;
+  }
+}

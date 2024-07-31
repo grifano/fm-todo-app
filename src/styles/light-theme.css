@@ -6,4 +6,10 @@
   --element-disable: #d1d2da;
   --element-dimm: #9495a5;
   --ekement-hover: #494c6b;
+  --header-image-bg-desktop: url("../assets/header/header-bg-light.webp");
+  --header-image-bg-mobile: url("../assets/header/header-bg-light--mobile.webp");
+  --element-bg: #fff;
+  --color-border: #e3e4f1;
+  --color-input-placeholder: #9495a5;
+  --element-shadow: 0 35px 50px -15px rgba(194, 195, 214, 0.5);
 }

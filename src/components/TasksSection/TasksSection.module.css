@@ -1,0 +1,9 @@
+.tasksSection {
+  margin-top: -92px;
+}
+
+@media screen and (min-width: 375px) {
+  .tasksSection {
+    margin-top: -142px;
+  }
+}

@@ -1,0 +1,64 @@
+.button {
+  color: #fff;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.isEdit,
+.isDelete {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  color: var(--color-warning);
+  position: relative;
+}
+.isDelete::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-warning);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+.isEdit {
+  color: var(--color-success);
+  position: relative;
+}
+.isEdit::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-success);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 375px) {
+  .button {
+    width: 42px;
+    height: 42px;
+    transition: background 0.3s ease-in-out;
+  }
+  .button:hover,
+  .button:focus {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .isDelete:hover::after,
+  .isDelete:focus::after,
+  .isEdit:hover::after,
+  .isEdit:focus::after {
+    opacity: 0.2;
+  }
+}

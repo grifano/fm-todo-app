@@ -1,0 +1,5 @@
+.tasksList {
+  background-color: var(--element-bg);
+  border-radius: 5px;
+  box-shadow: var(--element-shadow);
+}

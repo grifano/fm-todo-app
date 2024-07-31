@@ -5,5 +5,11 @@
   --body-text: #c8cbe7;
   --element-disable: #4d5067;
   --element-dimm: #5b5e7e;
-  --ekement-hover: #e3e4f1;
+  --element-hover: #e3e4f1;
+  --header-image-bg-desktop: url("../assets/header/header-bg-dark.webp");
+  --header-image-bg-mobile: url("../assets/header/header-bg-dark--mobile.webp");
+  --element-bg: #25273d;
+  --color-border: #393a4b;
+  --color-input-placeholder: #767992;
+  --element-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
 }

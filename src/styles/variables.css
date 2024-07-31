@@ -2,9 +2,8 @@
   /* Font Family */
   --font-family: "Josefin Sans", sans-serif;
 
-  /* Colors | Primitive */
-  --bright-blue: #3a7bfd;
-
   /* Colors | Semantics */
-  --checkmark: linear-gradient #57ddff to #c058f3;
+  --color-warning: #ff937f;
+  --color-success: #23c197;
+  --color-active: #3a7bfd;
 }

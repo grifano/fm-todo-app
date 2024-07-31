@@ -2,7 +2,20 @@ html {
   font-family: var(--font-family);
 }
 body {
-  font-size: 18px;
+  font-size: 12px;
   color: var(--body-text);
   background-color: var(--body-bg);
+}
+button {
+  display: inline-block;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    font-size: 18px;
+  }
 }

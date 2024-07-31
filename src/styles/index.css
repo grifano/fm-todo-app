@@ -1,5 +1,5 @@
 @import "./fonts.css";
-@import "node_modules/modern-normalize/modern-normalize.css";
+@import "/node_modules/modern-normalize/modern-normalize.css";
 @import "./reset.css";
 @import "./variables.css";
 @import "./base.css";

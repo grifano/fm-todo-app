@@ -1,0 +1,23 @@
+.inputBox {
+  margin-bottom: 24px;
+  box-shadow: var(--element-shadow);
+}
+.inputBox_field {
+  padding: 0px 20px;
+  min-height: 48px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: var(--body-text);
+  background-color: var(--element-bg);
+}
+.inputBox_field::placeholder {
+  color: var(--color-input-placeholder);
+}
+
+@media screen and (min-width: 375px) {
+  .inputBox_field {
+    min-height: 64px;
+    padding: 0 24px;
+  }
+}
