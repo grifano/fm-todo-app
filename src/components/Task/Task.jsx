@@ -1,9 +1,8 @@
 import { useState } from "react";
 import clsx from "clsx";
-import css from "./Task.module.css";
 import Button from "../Button/Button";
 import { MdDelete, MdModeEdit } from "react-icons/md";
-import SvgIcon from "../SvgIcon/SvgIcon";
+import css from "./Task.module.css";
 
 export default function Task({ taskData }) {
   const [isChecked, setIsChecked] = useState(false);
@@ -26,9 +25,7 @@ export default function Task({ taskData }) {
           className={clsx(css.task_checkbox_checkmark, {
             [css.checked]: isChecked,
           })}
-        >
-          <SvgIcon name={"icon-check"} />
-        </span>
+        ></span>
         <p
           className={clsx(css.task_text, {
             [css.text_checked]: isChecked,

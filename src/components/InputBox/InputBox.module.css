@@ -1,9 +1,22 @@
 .inputBox {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   box-shadow: var(--element-shadow);
+  position: relative;
+}
+.inputBox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
 }
 .inputBox_field {
-  padding: 0px 20px;
+  padding: 0px 14px 0px 52px;
   min-height: 48px;
   width: 100%;
   border: none;
@@ -18,6 +31,15 @@
 @media screen and (min-width: 375px) {
   .inputBox_field {
     min-height: 64px;
-    padding: 0 24px;
+    padding: 0px 20px 0px 72px;
+  }
+  .inputBox::before {
+    margin-right: 24px;
+    width: 24px;
+    height: 24px;
+    left: 24px;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
   }
 }

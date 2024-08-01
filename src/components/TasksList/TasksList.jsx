@@ -5,8 +5,7 @@ import TasksActions from "../TasksActions/TasksActions";
 import css from "./TasksList.module.css";
 
 export default function TasksList({ tasks }) {
-  const [taskCounter, setTaskCounter] = useState(tasks.length);
-  // const filterClass = clsx(css.tasks_filter);
+  const [taskCounter, setTaskCounter] = useState(0);
   const handleClearTasks = () => {
     console.log("remove completed");
   };
@@ -17,8 +16,7 @@ export default function TasksList({ tasks }) {
   useEffect(() => {
     const getTaskToComplete = () => {
       const taskToComplete = tasks.filter((task) => task.isComplete);
-      console.log(taskToComplete);
-      // setTaskCounter(taskToComplete)
+      setTaskCounter(taskToComplete.length);
     };
     getTaskToComplete();
   }, [tasks]);
