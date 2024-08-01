@@ -1,6 +1,7 @@
+// TasksSection.jsx
 import TasksList from "../TasksList/TasksList";
 import css from "./TasksSection.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import InputBox from "../InputBox/InputBox";
 import {
   fetchTasks,
@@ -12,7 +13,19 @@ import Container from "../Container/Container";
 
 export default function TasksSection() {
   const [tasks, setTasks] = useState([]);
-  const [filter, setFilter] = useState("all"); // for managing filter state
+  const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    const getAllTasks = async () => {
+      try {
+        const allTasks = await fetchTasks();
+        setTasks(allTasks);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    getAllTasks();
+  }, []);
 
   const addNewTask = async (task) => {
     if (!task) return;
@@ -20,15 +33,14 @@ export default function TasksSection() {
     try {
       const addedTask = await addTask(task);
       setTasks((prevTasks) => [...prevTasks, addedTask]);
-      console.log("New task added successfully!"); // TODO: add toast
+      console.log("New task added successfully!");
     } catch (error) {
-      console.log(error.message); // TODO: add toast
+      console.log(error.message);
     }
   };
 
   const handleClearTasks = () => {
-    console.log("Remove completed");
-    const remainingTasks = tasks.filter((task) => !task.isComplete);
+    const remainingTasks = tasks.filter((task) => !task.isCompleted);
     setTasks(remainingTasks);
   };
 
@@ -57,31 +69,19 @@ export default function TasksSection() {
         prevTasks.filter((task) => task.id !== deletedTaskId)
       );
     } catch (error) {
-      console.log(error.message); // TODO: add toast
+      console.log(error.message);
     }
   };
 
-  useEffect(() => {
-    const getAllTasks = async () => {
-      try {
-        const allTasks = await fetchTasks();
-        setTasks(allTasks);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    getAllTasks();
-  }, []);
-
-  const getFilteredTasks = () => {
-    if (filter === "isCompleted") {
-      return tasks.filter((task) => task.isComplete);
+  const getFilteredTasks = useCallback(() => {
+    if (filter === "Completed") {
+      return tasks.filter((task) => task.isCompleted);
     } else if (filter === "Active") {
-      return tasks.filter((task) => !task.isComplete);
+      return tasks.filter((task) => !task.isCompleted);
     } else {
       return tasks;
     }
-  };
+  }, [tasks, filter]);
 
   return (
     <section className={css.tasksSection}>

@@ -13,9 +13,8 @@ This repository contained the implementation of an image search application usin
 - ✅ Add new todos to the list
 - ✅ Mark todos as complete
 - ✅ Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- **Bonus**: Drag and drop to reorder items on the list
+- ✅ Filter by all/active/complete todos
+- ✅ Clear all completed todos
 
 ## Live Demo
 

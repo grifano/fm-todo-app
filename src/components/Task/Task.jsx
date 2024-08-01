@@ -1,7 +1,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 import Button from "../Button/Button";
-import { MdDelete, MdModeEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 import css from "./Task.module.css";
 
 export default function Task({ taskData, onDeleteAction, onCheckedAction }) {
@@ -43,9 +43,6 @@ export default function Task({ taskData, onDeleteAction, onCheckedAction }) {
         <Button isDelete="isDelete" onClick={handleDeleteAction}>
           <MdDelete />
         </Button>
-        {/* <Button isEdit="isEdit">
-          <MdModeEdit />
-        </Button> */}
       </div>
     </li>
   );

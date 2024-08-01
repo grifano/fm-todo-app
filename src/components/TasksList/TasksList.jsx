@@ -14,7 +14,7 @@ export default function TasksList({
   const [taskCounter, setTaskCounter] = useState(0);
 
   useEffect(() => {
-    const completedTasks = tasks.filter((task) => task.isCompleted);
+    const completedTasks = tasks.filter((task) => !task.isCompleted);
     setTaskCounter(completedTasks.length);
   }, [tasks]);
 
