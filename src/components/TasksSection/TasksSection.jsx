@@ -11,6 +11,7 @@ import {
 } from "../../utils/todo-api";
 import Container from "../Container/Container";
 import toast from "react-hot-toast";
+import EmptyList from "../EmptyList/EmptyList";
 
 export default function TasksSection() {
   const [tasks, setTasks] = useState([]);
@@ -69,6 +70,7 @@ export default function TasksSection() {
       setTasks((prevTasks) =>
         prevTasks.filter((task) => task.id !== deletedTaskId)
       );
+      toast.success("Task deleted.");
     } catch (error) {
       toast.error("Oups! Something went wrong, try reload the page ");
       console.log(error.message);
@@ -89,7 +91,7 @@ export default function TasksSection() {
     <section className={css.tasksSection}>
       <Container>
         <InputBox onSubmit={addNewTask} />
-        {tasks.length > 0 && (
+        {tasks.length > 0 ? (
           <TasksList
             tasks={getFilteredTasks()}
             onDeleteAction={handleDeleteTask}
@@ -97,6 +99,8 @@ export default function TasksSection() {
             onFilterAction={handleFilterTasks}
             onCheckedAction={handleTaskChecked}
           />
+        ) : (
+          <EmptyList />
         )}
       </Container>
     </section>

@@ -2,6 +2,42 @@
   margin-top: auto;
   padding: 24px 0;
 }
+.footer_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.footer_col {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
 .footer p {
-  text-align: center;
+  padding-top: 4px;
+}
+.footer_link {
+  color: var(--color-active);
+}
+@media screen and (min-width: 991px) {
+  .footer_link {
+    position: relative;
+  }
+  .footer_link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: var(--color-active);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+  }
+  .footer_link:hover::after,
+  .footer_link:focus::after {
+    transform: scale(1);
+  }
 }

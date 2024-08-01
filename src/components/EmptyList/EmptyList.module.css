@@ -1,0 +1,14 @@
+.emptyList_text {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: var(--element-bg);
+  box-shadow: var(--element-shadow);
+}
+@media screen and (min-width: 375px) {
+  .emptyList_text {
+    min-height: 64px;
+  }
+}
