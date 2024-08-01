@@ -4,11 +4,16 @@ import Button from "../Button/Button";
 import { MdDelete, MdModeEdit } from "react-icons/md";
 import css from "./Task.module.css";
 
-export default function Task({ taskData }) {
-  const [isChecked, setIsChecked] = useState(false);
+export default function Task({ taskData, onDeleteAction, onCheckedAction }) {
+  const [isChecked, setIsChecked] = useState(taskData.isCompleted);
 
   const handleCheckboxChange = () => {
+    const newdata = { ...taskData, isCompleted: !isChecked };
+    onCheckedAction(newdata);
     setIsChecked(!isChecked);
+  };
+  const handleDeleteAction = () => {
+    onDeleteAction(taskData.id);
   };
 
   return (
@@ -35,12 +40,12 @@ export default function Task({ taskData }) {
         </p>
       </label>
       <div className={css.task_action}>
-        <Button isDelete="isDelete">
+        <Button isDelete="isDelete" onClick={handleDeleteAction}>
           <MdDelete />
         </Button>
-        <Button isEdit="isEdit">
+        {/* <Button isEdit="isEdit">
           <MdModeEdit />
-        </Button>
+        </Button> */}
       </div>
     </li>
   );

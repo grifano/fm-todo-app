@@ -11,6 +11,10 @@ export async function addTask(newTask) {
   return response.data;
 }
 export async function removeTask(taskId) {
-  const response = await axios.post(`/tasks:${taskId}`);
+  const response = await axios.delete(`/tasks/${taskId}`);
+  return response.data;
+}
+export async function updateTask(taskId, newData) {
+  const response = await axios.put(`/tasks/${taskId}`, newData);
   return response.data;
 }

@@ -16,6 +16,7 @@ export default function InputBox({ onSubmit }) {
       isCompleted: false,
     };
     onSubmit(newTask);
+    setValue("");
   };
 
   const handleOnChange = (event) => {
