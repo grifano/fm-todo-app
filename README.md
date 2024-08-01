@@ -2,7 +2,7 @@
 
 # React ToDo App
 
-<!-- <img src="./src/assets/screenshot.webp" alt="app screenshot" width="50%"/> -->
+<img src="./src/assets/screenshot.webp" alt="app screenshot" width="50%"/>
 
 This repository contained the implementation of an image search application using React. The project was created with Vite, used Formik for forms, Axios for HTTP requests, and styled components with CSS modules. The application had several key functionalities, which are summarized below:
 
@@ -18,8 +18,8 @@ This repository contained the implementation of an image search application usin
 
 ## Live Demo
 
-- **Source Files**: [GitHub Repository]()
-- **Working Page**: [Live Preview](https://goit-react-hw-04-delta-blue.vercel.app/)
+- **Source Files**: [GitHub Repository](https://github.com/grifano/fm-todo-app)
+- **Working Page**: [Live Preview](https://fm-todo-app-two.vercel.app/)
 
 ## Project Setup
 

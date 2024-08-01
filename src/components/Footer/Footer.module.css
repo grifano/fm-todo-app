@@ -17,6 +17,11 @@
 .footer p {
   padding-top: 4px;
 }
+.footer img {
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #fff;
+}
 .footer_link {
   color: var(--color-active);
 }
