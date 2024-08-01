@@ -1,7 +1,7 @@
 // TasksSection.jsx
 import TasksList from "../TasksList/TasksList";
 import css from "./TasksSection.module.css";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback } from "react";
 import InputBox from "../InputBox/InputBox";
 import {
   fetchTasks,
@@ -10,6 +10,7 @@ import {
   updateTask,
 } from "../../utils/todo-api";
 import Container from "../Container/Container";
+import toast from "react-hot-toast";
 
 export default function TasksSection() {
   const [tasks, setTasks] = useState([]);
@@ -21,6 +22,7 @@ export default function TasksSection() {
         const allTasks = await fetchTasks();
         setTasks(allTasks);
       } catch (error) {
+        toast.error("Oups! Something went wrong, try reload the page ");
         console.log(error.message);
       }
     };
@@ -33,8 +35,8 @@ export default function TasksSection() {
     try {
       const addedTask = await addTask(task);
       setTasks((prevTasks) => [...prevTasks, addedTask]);
-      console.log("New task added successfully!");
     } catch (error) {
+      toast.warning("Oups! Something went wrong, try reload the page ");
       console.log(error.message);
     }
   };
@@ -56,7 +58,6 @@ export default function TasksSection() {
           task.id === updatedTask.id ? updatedTask : task
         )
       );
-      console.log("Task updated successfully!");
     } catch (error) {
       console.log(error.message);
     }
@@ -69,6 +70,7 @@ export default function TasksSection() {
         prevTasks.filter((task) => task.id !== deletedTaskId)
       );
     } catch (error) {
+      toast.error("Oups! Something went wrong, try reload the page ");
       console.log(error.message);
     }
   };

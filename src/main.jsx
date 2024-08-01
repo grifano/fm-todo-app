@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App/App";
-// import "./utils/themeManager";
-import "./styles/light-theme.css";
+import { loadSavedTheme } from "./utils/themeManager";
 import "./styles/index.css";
+
+const ThemeProvider = ({ children }) => {
+  useEffect(() => {
+    loadSavedTheme();
+  }, []);
+
+  return children;
+};
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );

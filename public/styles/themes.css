@@ -1,0 +1,29 @@
+/* Default theme (light) */
+:root {
+  --body-bg: #fafafa;
+  --body-text: #494c6b;
+  --element-disable: #d1d2da;
+  --element-dimm: #9495a5;
+  --ekement-hover: #494c6b;
+  --header-image-bg-desktop: url("../header/header-bg-light.webp");
+  --header-image-bg-mobile: url("../header/header-bg-light--mobile.webp");
+  --element-bg: #fff;
+  --color-border: #e3e4f1;
+  --color-input-placeholder: #9495a5;
+  --element-shadow: 0 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --body-bg: #171823;
+  --body-text: #c8cbe7;
+  --element-disable: #4d5067;
+  --element-dimm: #5b5e7e;
+  --element-hover: #e3e4f1;
+  --header-image-bg-desktop: url("../header/header-bg-dark.webp");
+  --header-image-bg-mobile: url("../header/header-bg-dark--mobile.webp");
+  --element-bg: #25273d;
+  --color-border: #393a4b;
+  --color-input-placeholder: #767992;
+  --element-shadow: 0 35px 50px -15px rgba(0, 0, 0, 0.5);
+}
