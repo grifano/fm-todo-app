@@ -4,11 +4,11 @@
 
 <img src="./src/assets/screenshot.webp" alt="app screenshot" width="50%"/>
 
-This repository contained the implementation of an image search application using React. The project was created with Vite, used Formik for forms, Axios for HTTP requests, and styled components with CSS modules. The application had several key functionalities, which are summarized below:
+This repository contained the implementation of a todo list application using React. The project was created with Vite, used Formik for forms, Axios for HTTP requests, and styled-components with CSS modules. The application had several key functionalities, which are summarized below:
 
 ## Functionality Summary
 
-- ✅ View the optimal layout for the app depending on their device's screen size
+- ✅ View the optimal layout for the app depending on the device's screen size
 - ✅ See hover states for all interactive elements on the page
 - ✅ Add new todos to the list
 - ✅ Mark todos as complete
